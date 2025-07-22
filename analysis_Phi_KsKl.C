@@ -189,7 +189,7 @@ int analysis_Phi_KsKl()
 		{
 
 			nbEvent++;
-			if (nbEvent % 30000 == 0)
+			if (nbEvent % 100000 == 0)
 			{
 				time(&intermediate);
 				double intermediate_time = difftime(intermediate, begin);

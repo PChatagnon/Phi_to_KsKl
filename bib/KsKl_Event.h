@@ -275,7 +275,7 @@ public:
                 Kl_Mass = vMissing.M();
 	        Q2 = (Electron.Vector - vBeam).M2();
                 t = (Proton.Vector - vRestProton).M2();
-	        W = (Electron.Vector + Proton.Vector - vRestProton - vBeam).M();
+	        W = (Electron.Vector - vRestProton - vBeam).M();
         }
 
 
