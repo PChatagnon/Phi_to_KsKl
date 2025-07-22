@@ -278,9 +278,6 @@ int analysis_Phi_KsKl()
 			outVars["W"] = ev.W;
 
 
-			outVars["vz_elec"] = MC_ev.vz_elec_Gen;
-			outVars["vz_Pi_plus"] = ev.Pi_plus.vertex.z;
-			outVars["vz_Pi_minus"] = ev.Pi_minus.vertex.z;
 
 			tree_Electron = ev.Electron.Vector;
 			tree_Pi_plus = ev.Pi_plus.Vector;

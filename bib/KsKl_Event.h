@@ -272,7 +272,7 @@ public:
 
                 Phi_Mass = (Electron.Vector + Proton.Vector - vRestProton - vBeam).M();
 	        Ks_Mass = (Pi_minus.Vector + Pi_plus.Vector).M();
-                Kl_mass = vMissing.M();
+                Kl_Mass = vMissing.M();
 	        Q2 = (Electron.Vector - vBeam).M2();
                 t = (Proton.Vector - vRestProton).M2();
 	        W = (Electron.Vector + Proton.Vector - vRestProton - vBeam).M();
