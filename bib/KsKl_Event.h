@@ -26,7 +26,7 @@ public:
         // Kinematic variables
         float Phi_Mass;
 	float Ks_Mass;
-        float Kl_mass;
+        float Kl_Mass;
 	float Q2;
         float t;
 	float W;

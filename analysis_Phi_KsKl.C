@@ -196,8 +196,8 @@ int analysis_Phi_KsKl()
 				cout << nbEvent << " events processed in " << intermediate_time << "s" << "\n";
 			}
 
-			muEvent ev;
-			muMCEvent MC_ev;
+			KsKl_Event ev;
+			//muMCEvent MC_ev;
 
 			int run = 0;
 			int event_nb = 0;
