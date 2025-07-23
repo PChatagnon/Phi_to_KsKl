@@ -109,6 +109,12 @@ int analysis_Phi_KsKl()
         "t",
 	    "W",
 
+		"vt_elec",
+		"vt_pi_plus",
+		"vt_pi_minus",
+		"vt_proton",
+
+
 	};
 
 	std::map<TString, Float_t> outVars;
@@ -277,7 +283,10 @@ int analysis_Phi_KsKl()
 			outVars["t"] = ev.t;
 			outVars["W"] = ev.W;
 
-
+			outVars["vt_elec"] = ev.Electron.vt;
+			outVars["vt_pi_plus"] = ev.Pi_plus.vt;
+			outVars["vt_pi_minus"] = ev.Pi_minus.vt;
+			outVars["vt_proton"] = ev.Proton.vt;
 
 			tree_Electron = ev.Electron.Vector;
 			tree_Pi_plus = ev.Pi_plus.Vector;

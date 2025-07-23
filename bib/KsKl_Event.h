@@ -138,7 +138,7 @@ public:
 
         bool pass_topology_cut()
         {
-                return (rec_pi_p == 1 && rec_pi_m == 1 && rec_e == 1 && rec_p == 1) && (abs(Ks_Mass-mK)<0.5) && (abs(Kl_Mass-mK)<0.5);
+                return (rec_pi_p == 1 && rec_pi_m == 1 && rec_e == 1 && rec_p == 1) && (abs(Ks_Mass-mK)<0.5) && (abs(Kl_Mass-mK)<0.55);
         }
 
         void Associate_detector_resp(hipo::bank CHE, hipo::bank SCIN, hipo::bank CALO)
@@ -268,9 +268,9 @@ public:
         void Get_Kinematics()
         {
                 // Kinematic variables
-                vMissing = Pi_minus.Vector + Pi_plus.Vector + Electron.Vector + Proton.Vector - vRestProton - vBeam;
+                vMissing = vRestProton + vBeam - Pi_minus.Vector - Pi_plus.Vector - Electron.Vector - Proton.Vector;
 
-                Phi_Mass = (Electron.Vector + Proton.Vector - vRestProton - vBeam).M();
+                Phi_Mass = (vRestProton + vBeam - Electron.Vector - Proton.Vector).M();
 	        Ks_Mass = (Pi_minus.Vector + Pi_plus.Vector).M();
                 Kl_Mass = vMissing.M();
 	        Q2 = (Electron.Vector - vBeam).M2();
