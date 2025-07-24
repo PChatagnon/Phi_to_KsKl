@@ -138,7 +138,7 @@ public:
 
         bool pass_topology_cut()
         {
-                return (rec_pi_p == 1 && rec_pi_m == 1 && rec_e == 1 && rec_p == 1) && (abs(Ks_Mass-mK)<0.5) && (abs(Kl_Mass-mK)<0.55);
+                return (rec_pi_p > 0 && rec_pi_m > 0 && rec_e > 0 && rec_p > 0) && (abs(Ks_Mass-mK)<0.5) && (abs(Kl_Mass-mK)<0.5);
         }
 
         void Associate_detector_resp(hipo::bank CHE, hipo::bank SCIN, hipo::bank CALO)

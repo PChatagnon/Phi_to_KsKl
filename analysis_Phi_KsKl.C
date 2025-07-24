@@ -114,6 +114,17 @@ int analysis_Phi_KsKl()
 		"vt_pi_minus",
 		"vt_proton",
 
+		"rec_e",
+		"rec_pi_p",
+		"rec_pi_m",
+		"rec_p",
+
+		"status_elec",
+		"status_pi_plus",
+		"status_pi_minus",
+		"status_proton",
+
+
 
 	};
 
@@ -195,7 +206,7 @@ int analysis_Phi_KsKl()
 		{
 
 			nbEvent++;
-			if (nbEvent % 100000 == 0)
+			if (nbEvent % 500000 == 0)
 			{
 				time(&intermediate);
 				double intermediate_time = difftime(intermediate, begin);
@@ -287,6 +298,16 @@ int analysis_Phi_KsKl()
 			outVars["vt_pi_plus"] = ev.Pi_plus.vt;
 			outVars["vt_pi_minus"] = ev.Pi_minus.vt;
 			outVars["vt_proton"] = ev.Proton.vt;
+
+			outVars["rec_e"] = ev.rec_e;
+			outVars["rec_pi_p"] = ev.rec_pi_p;
+			outVars["rec_pi_m"] = ev.rec_pi_m;
+			outVars["rec_p"] = ev.rec_p;
+
+			outVars["status_elec"] = ev.Electron.status;
+			outVars["status_pi_plus"] = ev.Pi_plus.status;
+			outVars["status_pi_minus"] = ev.Pi_minus.status;
+			outVars["status_proton"] = ev.Proton.status;
 
 			tree_Electron = ev.Electron.Vector;
 			tree_Pi_plus = ev.Pi_plus.Vector;
